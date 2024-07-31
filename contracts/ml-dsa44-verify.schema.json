@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Signer": {
+      "type": "object",
+      "properties": {
+        "mldsa44_public_key": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "mldsa44_public_key"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "mldsa44_signature": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "Signer",
+    "message",
+    "mldsa44_signature"
+  ]
+}
