@@ -1,24 +1,27 @@
-#
-# The whole mldsa44 signature flow, works pretty much like ECDSA
-#
-# Here we are load the QP Scenario
 Scenario qp : Alice signs the message
 
 # Here I load my private key, which is stored in a schema named 'keyring'
 Given I have a 'keyring'
 
 # Here I loead the object I want to sign.
-# The object can be a simple object like a string, 
-# or a complex one such an array or a dictionary 
+# The object can be a simple object like a string,
+# or a complex one such an array or a dictionary
 Given I have a 'string' named 'message'
 
 # Here I create the mldsa44 signature
 When I create the mldsa44 signature of 'message'
 
-When I create the mldsa44 public key 
+# Here we create a base64 dictionary and rename it to 'Signer', the pk will go into it
+When I create the 'base64 dictionary' 
+When I rename the 'base64 dictionary' to 'Signer'
 
-# Here I print out the signature and the message
+# Here we create the ml-dsa-44 public key
+When I create the mldsa44 public key
+
+#Here we move the pk into Signer: we do this so that verification is smoother
+When I move 'mldsa44 public key' in 'Signer'
+
+# Here I print out the signature, the message and the pk (inside 'Signer')
 Then print the 'mldsa44 signature'
 Then print the 'message'
-Then print the 'mldsa44 public key'
-
+Then print the 'Signer'
