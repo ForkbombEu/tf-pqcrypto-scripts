@@ -28,4 +28,12 @@ ncr -p 8080 -z ../tf-pqcrypto-scripts/contracts &
 # Swagger
 
 Open the browser to http://localhost:8080/docs 
+
+# Applets
+
+In Swagger, navigate the *Generated Applets* section, press execute and open the URL in the browser, or access the applets directly from:
+
+* Signature applets: http://localhost:8080/ml-dsa44-sign/app
+* Verification applets:http://localhost:8080/ml-dsa44-verify/app
+
  
