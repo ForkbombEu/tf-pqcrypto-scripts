@@ -1,4 +1,4 @@
-# tf-pqcrypto-scripts
+# Post-Quantume Cryptography Zenroom scripts
 Multiplatofrm Post-Quantum cryptography Zenroom scripts for microservices or as a library.
 
 Includes: 
