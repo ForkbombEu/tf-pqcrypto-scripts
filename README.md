@@ -1,4 +1,4 @@
-# Post-Quantume Cryptography Zenroom scripts
+# Post-Quantum Cryptography Zenroom scripts
 Multiplatofrm Post-Quantum cryptography Zenroom scripts for microservices or as a library.
 
 Includes: 
