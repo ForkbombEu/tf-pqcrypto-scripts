@@ -19,15 +19,15 @@ Downlod NCR:
 wget https://github.com/forkbombeu/ncr/releases/latest/download/ncr -O ~/.local/bin/ncr && chmod +x ~/.local/bin/ncr
 ```
 
-Run NCR no port 8080:
+Run NCR no port 3333:
 
 ```bash
-ncr -p 8080 -z ../tf-pqcrypto-scripts/contracts &
+./ncr -p 3333 -z ../tf-pqcrypto-scripts/contracts
 ```
 
 # Swagger
 
-Open the browser at http://localhost:8080/docs 
+Open the browser at http://localhost:3333/docs 
 
 You should see something like: 
 
