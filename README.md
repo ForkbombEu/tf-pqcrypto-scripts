@@ -13,7 +13,7 @@ When used as standalone, requires [NCR](https://github.com/forkbombEu/ncr) to ru
 
 # Quickstart 
 
-Downlod NCR:
+Downlod NCR (currently **runs only on Linux**):
 
 ```bash
 wget https://github.com/forkbombeu/ncr/releases/latest/download/ncr -O ~/.local/bin/ncr && chmod +x ~/.local/bin/ncr
