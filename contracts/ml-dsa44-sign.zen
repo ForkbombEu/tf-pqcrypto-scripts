@@ -1,4 +1,9 @@
+Rule unknown ignore
 Scenario qp : Alice signs the message
+
+
+Given I send path 'keyring-file' and read file content and output into 'keyring'
+
 
 # Here I load my private key, which is stored in a schema named 'keyring'
 Given I have a 'keyring'

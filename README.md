@@ -13,10 +13,12 @@ When used as standalone, requires [NCR](https://github.com/forkbombEu/ncr) to ru
 
 # Quickstart 
 
+## Setup and unr NCR
+
 Downlod NCR (currently **runs only on Linux**):
 
 ```bash
-wget https://github.com/forkbombeu/ncr/releases/latest/download/ncr -O ~/.local/bin/ncr && chmod +x ~/.local/bin/ncr
+wget https://github.com/forkbombeu/ncr/releases/latest/download/ncr && chmod +x ncr
 ```
 
 Run NCR no port 3333:
@@ -24,6 +26,24 @@ Run NCR no port 3333:
 ```bash
 ./ncr -p 3333 -z ../tf-pqcrypto-scripts/contracts
 ```
+
+## Create keys, print pubkeys
+
+There are already secret and public keys in the folder ./contracts/keys that you can use for testing. 
+
+You can also create new keys, using the API *create-keys* or the corresponding applet that you can open at http://localhost:3333/create-keys/app, the new keys will be stored into ./contracts/keys/keyring.keys.json and ./contracts/keys/pubkeys.keys.json
+
+You can also print out the pubkeys using the API *print-pubkeys* or the corresponing applet at http://localhost:3333/print-pubkeys/app
+
+## APIs
+
+Once you have created your keys, you can: 
+- Sign a string (using the secret key we just created) with ML-DSA-44
+- verify a ML-DSA-44 signature 
+**Note**: if instead of a string you want to sign an object or data coming from an endpoint, 1 or 2 lines of Zencode are needed (ask us if you need help at info@forkbomb.eu)
+
+- encrypt a string using ML-KEM + AES (coming soon)
+- decrypt a string using ML-KEM + AES (coming soon)
 
 # Swagger
 

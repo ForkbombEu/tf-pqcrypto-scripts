@@ -2,23 +2,11 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "keyring": {
-      "type": "object",
-      "properties": {
-        "mldsa44": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "mldsa44"
-      ]
-    },
     "message": {
       "type": "string"
     }
   },
   "required": [
-    "keyring",
     "message"
   ]
 }

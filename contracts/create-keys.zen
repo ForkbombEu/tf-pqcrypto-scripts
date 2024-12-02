@@ -1,0 +1,33 @@
+# With this script we generate secret keys and pubkeys for ML-DSA-44 and ML-KEM-512:
+# 1) the secret keys are stored into ./contracts/keys/keyring.keys.json
+# 2) the pubkeys are stored into ./contracts/keys/pubkeys.keys.json
+
+Scenario qp : Create the mldsa44 and mlkem512 keys
+
+# Here we load the paths of the files that will contain the keys (the paths are inside create-keys.keys.json)
+Given I have a 'string' named 'keyring-file'
+Given I have a 'string' named 'pubkeys-file'
+
+# Here we generate secret and public keys 
+When I create the mldsa44 key
+When I create the mlkem512 key
+When I create the mldsa44 public key
+When I create the mlkem512 public key
+
+# Here we move the public keys into a JSON object
+When I create the 'base64 dictionary' named 'pubkeys'
+When I move 'mldsa44 public key' in 'pubkeys'
+When I move 'mlkem512 public key' in 'pubkeys'
+
+# Here we print out the keys, and the strings containing the paths
+Then print the 'keyring'
+Then print the 'pubkeys'
+Then print the 'keyring-file'
+Then print the 'pubkeys-file'
+
+# Here we store the keys in their respective files
+Then I send path 'keyring-file' and send content 'keyring' and store in file
+Then I send path 'pubkeys-file' and send content 'pubkeys' and store in file
+
+
+
