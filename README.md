@@ -59,8 +59,8 @@ You should see something like:
 
 In Swagger, navigate the *Generated Applets* section, press *execute* and open the resulting URL in the browser, or access the applets directly from:
 
-* Signature applet: http://localhost:8080/ml-dsa44-sign/app
-* Verification applet:http://localhost:8080/ml-dsa44-verify/app
+* Signature applet: http://localhost:3333/ml-dsa44-sign/app
+* Verification applet:http://localhost:3333/ml-dsa44-verify/app
 
 The applets look like: 
 
