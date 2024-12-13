@@ -1,32 +1,30 @@
-Rule unknown ignore
+#### 🔧 Docs:        https://dev.zenroom.org
+#### 🎮 Playground:  https://apiroom.net
+
 Scenario qp : Alice signs the message
 
-
+#### 👉 Here I load my private key, which is stored in a schema named 'keyring'
 Given I send path 'keyring-file' and read file content and output into 'keyring'
-
-
-# Here I load my private key, which is stored in a schema named 'keyring'
 Given I have a 'keyring'
 
-# Here I loead the object I want to sign.
-# The object can be a simple object like a string,
-# or a complex one such an array or a dictionary
+#### 👉 Here I load the object I want to sign. The object can be a simple object like a string, or a complex one such an array or a dictionary
 Given I have a 'string' named 'message'
 
-# Here I create the mldsa44 signature
+#### 👉 Here I create the mldsa44 signature
 When I create the mldsa44 signature of 'message'
 
-# Here we create a base64 dictionary and rename it to 'Signer', the pk will go into it
+#### 👉 Here we create a base64 dictionary and rename it to 'Signer', the pk will go into it
 When I create the 'base64 dictionary' 
 When I rename the 'base64 dictionary' to 'Signer'
 
-# Here we create the ml-dsa-44 public key
+#### 👉 Here we create the ml-dsa-44 public key
 When I create the mldsa44 public key
 
-#Here we move the pk into Signer: we do this so that verification is smoother
+#### 👉 Here we move the pk into Signer: we do this so that verification is smoother
 When I move 'mldsa44 public key' in 'Signer'
 
-# Here I print out the signature, the message and the pk (inside 'Signer')
+
+#### 👉 Here I print out the signature, the message and the pk (inside 'Signer')
 Then print the 'mldsa44 signature'
 Then print the 'message'
 Then print the 'Signer'
