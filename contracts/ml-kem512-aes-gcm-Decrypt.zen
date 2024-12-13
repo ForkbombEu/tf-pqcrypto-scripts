@@ -1,0 +1,28 @@
+#### 🔧 Docs:        https://dev.zenroom.org
+#### 🎮 Playground:  https://apiroom.net
+####
+#### 👉 With this script we decrypt a message (string): we generate a *secret* using ML-KEM-512, we encrypt the message with AES-GCM using the *secret*. 
+
+
+Scenario 'qp': load pqc statements
+Scenario 'ecdh': load classical crypto statements
+
+#### 👉 Here we load the secret key in the keyring (created and stored locally) as well as the AES-GCM encrypted object
+Given I send path 'keyring-file' and read file content and output into 'keyring'
+Given I have a 'keyring'
+Given I have a 'base64 dictionary' named 'ml-kem512-aes-gcm-encrypted-message'
+
+#### 👉 Here we do some in-memory data manipulation
+When I take 'header' from path 'ml-kem512-aes-gcm-encrypted-message'
+When I take 'text' from path 'ml-kem512-aes-gcm-encrypted-message'
+When I rename 'text' to 'ciphertext'
+
+#### 👉 Here we recreate the ML-KEM-512 KEM from using the secret key and the header of the AES-GCM
+When I create the mlkem512 secret from 'header'
+
+#### 👉 Here we use the ML-KEM-512 KEM to decrypt the AES-GCM and renamed it
+When I decrypt the text of 'ml-kem512-aes-gcm-encrypted-message' with 'mlkem512 secret'
+When I rename 'text' to 'cleartext'
+
+#### 👉 Here we print out the cleartext (output)
+Then print the 'cleartext' as 'string'

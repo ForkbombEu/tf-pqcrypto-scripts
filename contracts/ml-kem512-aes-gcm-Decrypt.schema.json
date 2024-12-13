@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "ml-kem512-aes-gcm-encrypted-message": {
+      "type": "object",
+      "properties": {
+        "checksum": {
+          "type": "string"
+        },
+        "header": {
+          "type": "string"
+        },
+        "iv": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "checksum",
+        "header",
+        "iv",
+        "text"
+      ]
+    }
+  },
+  "required": [
+    "ml-kem512-aes-gcm-encrypted-message"
+  ]
+}

@@ -4,6 +4,8 @@
 #### 👉 # The whole mldsa44 signature flow, works pretty much like ECDSA. Below we are load the QP Scenario
 Scenario qp : anyone verifies asignature
 
+### 💡QUICK TESTING 💡: use the pubkey that was created in the setup (you can print it out using /print-pubkeys)
+
 #### 👉 Here I load a public key, the object that was signed and the signature
 Given I have a 'mldsa44 public key' from 'Signer'
 Given I have a 'string' named 'message'

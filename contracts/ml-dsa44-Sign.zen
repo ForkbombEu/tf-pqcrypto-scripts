@@ -1,9 +1,13 @@
 #### 🔧 Docs:        https://dev.zenroom.org
 #### 🎮 Playground:  https://apiroom.net
+####
+####
+### 💡IMPORTANT💡: the secret key used to sign, is generated in the Setup /create-keys, and stored locally in ./contracts/keys. you can print the corresponding pubkey using /print-pubkeys)
 
 Scenario qp : Alice signs the message
 
 #### 👉 Here I load my private key, which is stored in a schema named 'keyring'
+
 Given I send path 'keyring-file' and read file content and output into 'keyring'
 Given I have a 'keyring'
 

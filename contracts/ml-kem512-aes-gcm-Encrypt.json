@@ -1,0 +1,4 @@
+{
+	"keyring-file": "./keys/keyring.keys.json",
+	"pubkeys-file": "./keys/pubkeys.keys.json"
+}
