@@ -26,4 +26,4 @@ ncr:
 	@echo "📦 Setup is done!"
 
 up: ncr ## 🚀 Up & run the project
-	./ncr -p 3000 -z contracts
+	./ncr -p 24000 -z contracts
