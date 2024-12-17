@@ -1,1 +1,5 @@
-{"tags": ["Setup: create and print secret/public keys"]}
+{
+  "tags": [
+    "Print public keys"
+  ]
+}
