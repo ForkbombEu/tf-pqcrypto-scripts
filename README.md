@@ -13,15 +13,22 @@ When used as standalone, requires [NCR](https://github.com/forkbombEu/ncr) to ru
 
 # Quickstart 
 
-## Setup and unr NCR
+## Setup and run 
 
-Downlod NCR (currently **runs only on Linux**):
+With the Makefile
+
+```bash
+make
+```
+### Setup and run manually
+
+Downlod NCR (**runs only on Linux**):
 
 ```bash
 wget https://github.com/forkbombeu/ncr/releases/latest/download/ncr && chmod +x ncr
 ```
 
-Run NCR no port 3333:
+Run NCR or port 3333:
 
 ```bash
 ./ncr -p 3333 -z ../tf-pqcrypto-scripts/contracts
