@@ -1,7 +1,7 @@
-#### 🔧 Docs:        https://dev.zenroom.org
-#### 🎮 Playground:  https://apiroom.net
-####
-#### 👉 With this script we print the pubkeys contained into ./contracts/keys/pubkeys.keys.json
+# 🔧 Docs:        https://dev.zenroom.org
+# 🎮 Playground:  https://apiroom.net
+#
+# 👉 With this script we print the pubkeys contained into ./contracts/keys/pubkeys.keys.json
 
 Given I send path 'pubkeys-file' and read file content and output into 'pubkeys'
 Given I have a 'base64 dictionary' named 'pubkeys'
