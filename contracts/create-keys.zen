@@ -1,5 +1,6 @@
-# 🔧 Docs:        https://dev.zenroom.org
-# 🎮 Playground:  https://apiroom.net
+# 🔧 Docs:       		https://dev.zenroom.org
+# 🎮 Playground:	  	https://apiroom.net
+# 🧩 Extra component: 	https://github.com/dyne/slangroom
 # 
 # 👉  With this script we generate secret keys and pubkeys for ML-DSA-44 and ML-KEM-512:
 #   1) the secret keys are stored into ./contracts/keys/keyring.keys.json
@@ -29,6 +30,7 @@ Then print the 'keyring-file'
 Then print the 'pubkeys-file'
 
 # 👉 Here we store the keys in their respective files
+# ‼️ NOTE: these two statements are executed by Slangroom: https://github.com/dyne/slangroom 
 Then I send path 'keyring-file' and send content 'keyring' and store in file
 Then I send path 'pubkeys-file' and send content 'pubkeys' and store in file
 
